@@ -1,0 +1,61 @@
+@use "./mixin" as *;
+
+@mixin header-location {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+#header-mob {
+  padding: 0px 24px;
+  background-color: white;
+  display: none;
+  @media (max-width: 1119px) {
+    display: block;
+  }
+  @media (max-width: 767px) {
+    display: block;
+    padding: 0px 16px;
+  }
+}
+
+.header-mobil {
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  column-gap: 16px;
+  .container-left {
+    @include header-location;
+  }
+  .container-right {
+    @include header-location;
+  }
+}
+
+.button-icon {
+  @include header-location;
+}
+
+.burger-strip::after {
+  content: "";
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.repair-strip::before {
+  content: "";
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+}
+
+.mobil-hidden {
+  display: block;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}

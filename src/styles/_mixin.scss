@@ -1,0 +1,21 @@
+@mixin padding-side {
+  padding-left: 32px;
+  padding-right: 32px;
+  @media (max-width: 1023px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @media (max-width: 425px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@mixin border-top {
+  border-top: 1px solid #d9fff5;
+}
+@mixin background-gradient {
+  background-image: linear-gradient(to right, #f8f8f8, #ffffff);
+}
+
+

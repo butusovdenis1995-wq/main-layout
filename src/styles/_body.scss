@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  .aside {
+    justify-content: flex-start;
+  }
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.full-content {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  border: 2px solid transparent;
+  background-color: #f8f8f8;
+}
+.full-content::before {
+  content: url(../assets/icon.svg);
+}
+
+.full-content:hover {
+  border: 2px solid #b8ffec;
+}
+
+.content-none {
+  @media (max-width: 425px) {
+    display: none;
+  }
+}
+
+#feedback {
+  display: none;
+}

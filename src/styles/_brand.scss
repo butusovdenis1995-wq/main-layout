@@ -1,0 +1,119 @@
+@use "./mixin" as *;
+
+.container-brand {
+  background-color: #f8f8f8;
+  background-clip: padding-box;
+  padding: 24px 32px 50px 32px;
+  @media (max-width: 1023px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.header-p-brend {
+  padding-left: 32px;
+  padding-right: 32px;
+  height: 56px;
+  padding-top: 16px;
+  border-top: 1px solid #d9fff5;
+  @include background-gradient;
+  @media (max-width: 1023px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @media (max-width: 425px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.p-brend {
+  font-family: "Rubik-Medium";
+  font-size: 16px;
+  color: #7e7e82;
+}
+.list-brend {
+  display: grid;
+  grid-template-columns: repeat(4, 240px);
+  gap: 16px 32px;
+  padding-bottom: 24px;
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, 224px);
+    gap: 16px 24px;
+  }
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(11, 240px);
+    gap: 16px 16px;
+    overflow-x: scroll;
+  }
+}
+
+.list-brend-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+  padding-left: 16px;
+  width: 240px;
+  height: 72px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px #eaeaea;
+  @media (max-width: 1119px) {
+    width: 224px;
+  }
+}
+
+.list-brend-button::after {
+  content: url(../assets/go.svg);
+}
+
+.hidden-desktop {
+  display: none;
+}
+
+.hidden-tablet {
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.hidden-tablet,
+.hidden-desktop {
+  @media (max-width: 425px) {
+    display: flex;
+  }
+}
+
+.button-icon-lenovo {
+  width: 108px;
+  height: 32px;
+}
+.button-icon-samsung {
+  width: 116px;
+  height: 38px;
+}
+.button-icon-apple {
+  width: 44px;
+  height: 44px;
+}
+.button-icon-vs {
+  width: 128px;
+  height: 21px;
+}
+.button-icon-bosch {
+  width: 128px;
+  height: 28px;
+}
+.button-icon-hp {
+  width: 52px;
+  height: 52px;
+}
+.button-icon-acer {
+  width: 94px;
+  height: 24px;
+}
+.button-icon-sony {
+  width: 128px;
+  height: 26px;
+}
