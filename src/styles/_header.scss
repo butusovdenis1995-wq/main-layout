@@ -10,10 +10,10 @@
   padding: 0px 24px;
   background-color: white;
   display: none;
-  @media (max-width: 1119px) {
+  @media (max-width: 1023px) {
     display: block;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 425px) {
     display: block;
     padding: 0px 16px;
   }
@@ -41,7 +41,7 @@
   width: 2px;
   height: 32px;
   background-color: #eaeaea;
-  @media (max-width: 767px) {
+  @media (max-width: 425px) {
     display: none;
   }
 }
@@ -55,7 +55,7 @@
 
 .mobil-hidden {
   display: block;
-  @media (max-width: 767px) {
+  @media (max-width: 425px) {
     display: none;
   }
 }

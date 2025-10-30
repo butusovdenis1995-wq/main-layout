@@ -20,7 +20,7 @@
       display: flex;
       align-items: center;
       column-gap: 8px;
-      @media (max-width: 1119px) {
+      @media (max-width: 1023px) {
         display: none;
       }
     }
@@ -52,6 +52,9 @@
     border: 2px solid transparent;
     background-color: rgba(255, 255, 255, 0.3);
     flex-shrink: 0;
+    font-family: "TTLakes-Medium";
+    font-weight: 500;
+    font-size: 16px;
   }
   .button-nav:hover {
     border: 2px solid #b8ffec;
@@ -79,6 +82,9 @@
   height: 160px;
   overflow: hidden;
   padding-top: 7px;
+  font-family: "TTLakes-Medium";
+  font-weight: 500;
+  font-size: 16px;
   @media (max-width: 1119px) {
     width: 312px;
     height: 160px;

@@ -1,4 +1,5 @@
 @use "./mixin" as *;
+@use "./font-style" as *;
 
 * {
   box-sizing: border-box;
@@ -8,19 +9,44 @@
 
 #aside-placeholder {
   display: block;
-  @media (max-width: 1119px) {
+  position: relative;
+  height: 1925px;
+  @media (max-width: 1023px) {
     display: none;
+    top: 0;
+    left: 0;
+    height: 1925px;
+    width: 100vw;
+    background-color: rgba(#ffffff, 0.9);
   }
 }
 
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 32px;
+  padding-bottom: 32px;
+  max-width: 320px;
+  height: 100%;
+  padding: 18px 32px 32px 24px;
+  background-color: #ffffff;
+  @media (max-width: 1023px) {
+    box-shadow: 16px 0px 52px #0e185033;
+    position: absolute;
+    z-index: 50;
+  }
+}
 .container-aside {
   display: flex;
   flex-direction: column;
-  max-width: 320px;
-  height: 100vh;
-  padding: 18px 32px 32px 24px;
-  @media (max-width: 767px) {
-    box-shadow: 16px 0px 52px #0e185033;
+}
+
+.as-close {
+  display: none;
+  @media (max-width: 1023px) {
+    display: block;
   }
 }
 
@@ -28,7 +54,9 @@
   display: inline-flex;
   align-items: center;
   margin-bottom: 46px;
+  column-gap: 6px;
 }
+
 .aside-footer {
   display: flex;
   flex: 1;
@@ -36,12 +64,12 @@
   justify-content: space-between;
   max-height: 890px;
 }
-.aside {
+
+.aside-container-button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   row-gap: 32px;
-  padding-bottom: 32px;
 }
 
 .button-contacts {
@@ -116,4 +144,9 @@ a[href^="mailto"] {
 .lang-ru,
 .pselement {
   opacity: 0.5;
+}
+.aside-button {
+  font-family: "TTLakes-Medium";
+  font-weight: 500;
+  font-size: 16px;
 }

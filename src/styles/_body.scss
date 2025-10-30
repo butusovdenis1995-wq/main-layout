@@ -1,35 +1,46 @@
 body {
   display: flex;
-  .aside {
-    justify-content: flex-start;
+  height: 1925px;
+  font-family: Arial, sans-serif;
+  .container-aside {
+    height: 1925px;
+    background-color: #ffffff;
   }
 }
+
 .container {
   width: 100vw;
   height: 100vh;
 }
 
-.full-content {
+.button-style-hidden {
   display: flex;
   column-gap: 8px;
   align-items: center;
   border: 2px solid transparent;
   background-color: #f8f8f8;
 }
-.full-content::before {
+.button-style-hidden::before {
   content: url(../assets/icon.svg);
 }
 
-.full-content:hover {
+.button-style-hidden:hover {
   border: 2px solid #b8ffec;
 }
 
-.content-none {
+.button-style-hidden {
   @media (max-width: 425px) {
     display: none;
   }
 }
 
-#feedback {
-  display: none;
+h1 {
+  font-family: "TTLakes-Bold";
+  font-weight: 700;
+}
+
+.button-nav {
+    font-family: "TTLakes-Medium";
+  font-weight: 500;
+  font-size: 16px;
 }

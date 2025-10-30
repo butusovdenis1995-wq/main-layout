@@ -1,4 +1,4 @@
-#feedback {
+#orderCall {
   display: none;
   position: absolute;
   height: 1925px;
@@ -10,7 +10,7 @@
   }
 }
 
-.container-feedback {
+.container-order-call {
   display: flex;
   flex-direction: column;
   width: 440px;
@@ -29,7 +29,7 @@
   }
 }
 
-.feedback-close {
+.feedback-close-call {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -43,11 +43,11 @@
   }
 }
 
-.title-feedback {
+.title-ordercall {
   position: relative;
   font-size: 28px;
 }
-.title-feedback::before {
+.title-ordercall::before {
   content: "";
   position: absolute;
   left: -32px;
@@ -58,13 +58,11 @@
     left: -16px;
   }
 }
-
 .form {
   display: flex;
   flex-direction: column;
 }
-
-.input-feedback {
+*input {
   padding: 12px 0px 12px 16px;
   width: 376px;
   height: 48px;
@@ -76,31 +74,12 @@
   }
 }
 
-*textarea {
-  padding: 12px 0px 0px 16px;
-  width: 376px;
-  height: 118px;
-  border-radius: 8px;
-  border: 1px solid #eaeaea;
-  margin-bottom: 16px;
-  resize: none;
-  @media (max-width: 425px) {
-    width: 288px;
-  }
-}
-
-.ahref__color {
-  color: #ff3e79;
-}
-
 .button-submit {
   margin-top: 23px;
   align-self: flex-end;
 }
+
 .agreement {
-  font-family: "TTLakes-Medium";
-  font-weight: 500;
-  font-size: 16px;
   @media (max-width: 425px) {
     width: 288px;
   }

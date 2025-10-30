@@ -1,14 +1,40 @@
-<h1>Обратная связь</h1>
-<form class="form" action="">
-  <input type="text" placeholder="Имя" name="user-name" />
-  <input type="tel" placeholder="Телефон" name="telephone" />
-  <input type="email" placeholder="Электронная почта" name="email" />
-  <textarea name="user-comment" placeholder="Сообщение"></textarea>
-  <p>
-    Нажимая “отправить”, вы даете согласие на обработку персональных данных и
-    соглашаетесь с нашей политикой конфиденциальности
-  </p>
-  <button type="submit">
-    <img src="../assets/send.svg" alt="send" />
+<div class="container-feedback">
+  <button id="close-form" class="feedback-close">
+    <img src="../assets/close.svg" alt="close" />
   </button>
-</form>
+  <h1 class="title-feedback">Обратная связь</h1>
+  <form class="form" action="">
+    <input
+      class="input-feedback"
+      type="text"
+      placeholder="Имя"
+      name="user-name"
+    />
+    <input
+      class="input-feedback"
+      type="tel"
+      placeholder="Телефон"
+      name="telephone"
+    />
+    <input
+      class="input-feedback"
+      type="email"
+      placeholder="Электронная почта"
+      name="email"
+    />
+    <textarea
+      class="textarea-feedback"
+      name="user-comment"
+      placeholder="Сообщение"
+    ></textarea>
+    <p class="agreement">
+      Нажимая “отправить”, вы даете согласие на
+      <a class="ahref__color" href="./"> обработку персональных данных</a> и
+      соглашаетесь с нашей
+      <a class="ahref__color" href="">политикой конфиденциальности</a>
+    </p>
+    <button class="button-submit" type="submit">
+      <img src="../assets/send.svg" alt="send" />
+    </button>
+  </form>
+</div>

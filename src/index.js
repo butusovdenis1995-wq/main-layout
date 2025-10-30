@@ -1,5 +1,7 @@
 import "./styles/index.scss";
-import "./functions.js";
+import { showForm } from "./functions.js";
+import { showAside } from "./functions.js";
+import { showAllBtn } from "./functions.js";
 import asideHTML from "./tamplate/aside.html";
 import headerHTML from "./tamplate/header.html";
 import mainHTML from "./tamplate/main.html";
@@ -8,6 +10,7 @@ import techniqueHTML from "./tamplate/technique.html";
 import pricesHTML from "./tamplate/prices.html";
 import footerHTML from "./tamplate/footer.html";
 import feedbackHTML from "./tamplate/feedback.html";
+import orderCallHTML from "./tamplate/orderCall.html";
 document.addEventListener("DOMContentLoaded", function () {
   const aside = document.getElementById("aside-placeholder");
   const header = document.getElementById("header-mob");
@@ -17,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const prices = document.getElementById("prices");
   const footer = document.getElementById("footer");
   const feedback = document.getElementById("feedback");
+  const orderCall = document.getElementById("orderCall");
   if (aside) {
     aside.innerHTML = asideHTML;
   }
@@ -41,4 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (feedback) {
     feedback.innerHTML = feedbackHTML;
   }
+  if (orderCall) {
+    orderCall.innerHTML = orderCallHTML;
+  }
+  showForm();
+  showAside();
+  showAllBtn();
 });
