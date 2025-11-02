@@ -14,7 +14,9 @@ button {
   row-gap: 32px;
   padding-bottom: 32px;
   width: 22vw;
+  max-width: 320px;
   min-height: 676px;
+  height: 100vh;
   padding: 18px 32px 22px 24px;
   background-color: var(--color-background-white);
   @media (max-width: 1023px) {

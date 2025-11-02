@@ -32,13 +32,15 @@ export function showForm() {
     window.scrollTo(0, scrollPosition);
     feedbackForm.style.display = "none";
   });
-  feedbackForm.addEventListener("click", function () {
-    document.body.style.removeProperty("overflow");
-    document.body.style.removeProperty("position");
-    document.body.style.removeProperty("top");
-    document.body.style.removeProperty("width");
-    window.scrollTo(0, scrollPosition);
-    feedbackForm.style.display = "none";
+  feedbackForm.addEventListener("click", function (e) {
+    if (e.target === this) {
+      document.body.style.removeProperty("overflow");
+      document.body.style.removeProperty("position");
+      document.body.style.removeProperty("top");
+      document.body.style.removeProperty("width");
+      window.scrollTo(0, scrollPosition);
+      feedbackForm.style.display = "none";
+    }
   });
 
   buttonCallForm.addEventListener("click", function () {
@@ -65,13 +67,15 @@ export function showForm() {
     window.scrollTo(0, scrollPosition);
     callForm.style.display = "none";
   });
-  callForm.addEventListener("click", function () {
-    document.body.style.removeProperty("overflow");
-    document.body.style.removeProperty("position");
-    document.body.style.removeProperty("top");
-    document.body.style.removeProperty("width");
-    window.scrollTo(0, scrollPosition);
-    callForm.style.display = "none";
+  callForm.addEventListener("click", function (e) {
+    if (e.target === this) {
+      document.body.style.removeProperty("overflow");
+      document.body.style.removeProperty("position");
+      document.body.style.removeProperty("top");
+      document.body.style.removeProperty("width");
+      window.scrollTo(0, scrollPosition);
+      callForm.style.display = "none";
+    }
   });
 }
 export function showAside() {
@@ -96,13 +100,15 @@ export function showAside() {
     window.scrollTo(0, scrollPosition);
     aside.style.display = "none";
   });
-  aside.addEventListener("click", function () {
-    document.body.style.removeProperty("overflow");
-    document.body.style.removeProperty("position");
-    document.body.style.removeProperty("top");
-    document.body.style.removeProperty("width");
-    window.scrollTo(0, scrollPosition);
-    aside.style.display = "none";
+  aside.addEventListener("click", function (e) {
+    if (e.target === this) {
+      document.body.style.removeProperty("overflow");
+      document.body.style.removeProperty("position");
+      document.body.style.removeProperty("top");
+      document.body.style.removeProperty("width");
+      window.scrollTo(0, scrollPosition);
+      aside.style.display = "none";
+    }
   });
 }
 export function showAllBtn() {
