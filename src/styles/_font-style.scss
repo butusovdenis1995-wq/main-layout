@@ -6,7 +6,6 @@
   font-display: swap;
 }
 
-
 @font-face {
   font-family: "TTLakes-Medium";
   src: url("../fonts/TTLakes-Medium.woff2") format ("woff2");
@@ -15,3 +14,16 @@
   font-display: swap;
 }
 
+button,
+p,
+td,
+div,
+span {
+  font-family: "TTLakes-Medium";
+  font-weight: 500;
+}
+
+h1 {
+  font-family: "TTLakes-Bold";
+  font-weight: 700;
+}

@@ -7,22 +7,70 @@ export function showForm() {
   const buttonCallFormMain = document.getElementById("buttonCallFormMain");
   const buttonCallForm = document.getElementById("buttonCallForm");
   const callClose = document.getElementById("close-form-call");
+  let scrollPosition = 0;
   buttonForm.addEventListener("click", function () {
+    scrollPosition = window.pageYOffset;
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = "100%";
     feedbackForm.style.display = "flex";
   });
   buttonFormMain.addEventListener("click", function () {
+    scrollPosition = window.pageYOffset;
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = "100%";
     feedbackForm.style.display = "flex";
   });
   feedbackClose.addEventListener("click", function () {
+    document.body.style.removeProperty("overflow");
+    document.body.style.removeProperty("position");
+    document.body.style.removeProperty("top");
+    document.body.style.removeProperty("width");
+    window.scrollTo(0, scrollPosition);
     feedbackForm.style.display = "none";
   });
+  feedbackForm.addEventListener("click", function () {
+    document.body.style.removeProperty("overflow");
+    document.body.style.removeProperty("position");
+    document.body.style.removeProperty("top");
+    document.body.style.removeProperty("width");
+    window.scrollTo(0, scrollPosition);
+    feedbackForm.style.display = "none";
+  });
+
   buttonCallForm.addEventListener("click", function () {
+    scrollPosition = window.pageYOffset;
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = "100%";
     callForm.style.display = "flex";
   });
   buttonCallFormMain.addEventListener("click", function () {
+    scrollPosition = window.pageYOffset;
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = "100%";
     callForm.style.display = "flex";
   });
   callClose.addEventListener("click", function () {
+    document.body.style.removeProperty("overflow");
+    document.body.style.removeProperty("position");
+    document.body.style.removeProperty("top");
+    document.body.style.removeProperty("width");
+    window.scrollTo(0, scrollPosition);
+    callForm.style.display = "none";
+  });
+  callForm.addEventListener("click", function () {
+    document.body.style.removeProperty("overflow");
+    document.body.style.removeProperty("position");
+    document.body.style.removeProperty("top");
+    document.body.style.removeProperty("width");
+    window.scrollTo(0, scrollPosition);
     callForm.style.display = "none";
   });
 }
@@ -30,17 +78,38 @@ export function showAside() {
   const aside = document.getElementById("aside-placeholder");
   const burger = document.getElementById("burger");
   const asideClose = document.getElementById("aside-close");
+  let scrollPosition = 0;
   burger.addEventListener("click", function () {
     aside.style.display = "block";
     aside.style.position = "absolute";
+    scrollPosition = window.pageYOffset;
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = "100%";
   });
   asideClose.addEventListener("click", function () {
+    document.body.style.removeProperty("overflow");
+    document.body.style.removeProperty("position");
+    document.body.style.removeProperty("top");
+    document.body.style.removeProperty("width");
+    window.scrollTo(0, scrollPosition);
+    aside.style.display = "none";
+  });
+  aside.addEventListener("click", function () {
+    document.body.style.removeProperty("overflow");
+    document.body.style.removeProperty("position");
+    document.body.style.removeProperty("top");
+    document.body.style.removeProperty("width");
+    window.scrollTo(0, scrollPosition);
     aside.style.display = "none";
   });
 }
 export function showAllBtn() {
-  const hiddenContentTech = document.querySelector(".hidden-tech-button"); // для техники
-  const hiddenTabletTech = document.querySelector(".hidden-tablet-item");
+  const hiddenTechButton = document.querySelector(".hidden-tech-button"); // для техники
+  const hiddenTabletTechItem = document.querySelector(
+    ".types-technique-list-btn-hidden-tablet"
+  );
   const showTextTech = document.querySelector(".show-text-tach");
   const hideTextTech = document.querySelector(".hide-text-tech");
 
@@ -83,14 +152,14 @@ export function showAllBtn() {
     });
   });
 
-  hiddenContentTech.addEventListener("click", function () {
+  hiddenTechButton.addEventListener("click", function () {
     isExpandedTech = !isExpandedTech;
 
     if (viewWidth < 1023) {
       if (isExpandedTech) {
-        hiddenTabletTech.style.display = "flex";
+        hiddenTabletTechItem.style.display = "flex";
       } else {
-        hiddenTabletTech.style.display = "none";
+        hiddenTabletTechItem.style.display = "none";
       }
     }
 

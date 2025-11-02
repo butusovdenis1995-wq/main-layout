@@ -1,16 +1,6 @@
 @use "./mixin" as *;
 
-.container-brand {
-  background-color: #f8f8f8;
-  background-clip: padding-box;
-  padding: 24px 32px 50px 32px;
-  @media (max-width: 1023px) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
-.header-p-brend {
+.brand-header-title {
   padding-left: 32px;
   padding-right: 32px;
   height: 56px;
@@ -27,18 +17,28 @@
   }
 }
 
-.p-brend {
-  font-family: "TTLakes-Medium";
-  font-weight: 500;
+.brand-header-p {
   font-size: 16px;
-  color: #7e7e82;
+  color: var(--color-text);
 }
-.list-brend {
+
+.brand-container {
+  background-color: var(--color-background-grey);
+  background-clip: padding-box;
+  padding: 24px 32px 50px 32px;
+  overflow-x: hidden;
+  @media (max-width: 1023px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.brand-container-list {
   display: grid;
   grid-template-columns: repeat(4, 240px);
   gap: 16px 32px;
   padding-bottom: 24px;
-  @media (max-width: 1023px) {
+  @media (max-width: 1120px) {
     grid-template-columns: repeat(3, 224px);
     gap: 16px 24px;
   }
@@ -49,7 +49,7 @@
   }
 }
 
-.list-brend-button {
+.brand-container-list-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,15 +57,15 @@
   padding-left: 16px;
   width: 240px;
   height: 72px;
-  background-color: white;
+  background-color: var(--color-background-white);
   border-radius: 6px;
   border: 1px #eaeaea;
-  @media (max-width: 1119px) {
+  @media (max-width: 1390px) {
     width: 224px;
   }
 }
 
-.list-brend-button::after {
+.brand-container-list-button::after {
   content: url(../assets/go.svg);
 }
 

@@ -1,24 +1,20 @@
 @use "./mixin" as *;
 
-.header-price {
+.price-title {
   padding: 16px 32px 16px 32px;
-  color: #7e7e82;
+  color: var(--color-text);
   border-top: 1px solid #d9fff5;
-  font-family: "TTLakes-Medium";
-  font-weight: 500;
   font-size: 16px;
   @include background-gradient;
 }
 
-.container-table {
+.price-table-container {
   padding: 32px;
-  background-color: #f8f8f8;
-  font-family: "TTLakes-Medium";
-  font-weight: 500;
+  background-color: var(--color-background-grey);
   font-size: 16px;
 }
 
-.table-price {
+.price-table {
   width: 100%;
   border-collapse: collapse; // убирает промежутки между ячейками
   @media (max-width: 425px) {
@@ -26,16 +22,16 @@
   }
 }
 
-.tr-head {
+.price-table-header-tr {
   color: var(--color-text);
 }
 
-.body-table {
-  background-color: white;
+.price-table-body {
+  background-color: var(--color-background-white);
   border-collapse: collapse;
 }
 
-.tr_padding {
+.price-table-body-tr {
   position: relative;
   &:not(:last-child)::after {
     content: "";
@@ -44,7 +40,7 @@
     left: 24px;
     right: 24px;
     height: 1px;
-    background-color: #eaeaea;
+    background-color: var(--color-background-strip);
   }
 }
 
@@ -58,21 +54,23 @@
   color: var(--color-text);
 }
 
-.order {
+.price-button-order {
   text-align: right;
 }
 
-.border-radius-top {
+.price-table-border-radius-top {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
 
-.border-radius-bottom {
+.price-table-border-radius-bottom {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
 
-.mobil-price {
+//Мобилка
+
+.price-table-mobil-media {
   display: none;
   column-gap: 16px;
   margin-top: 16px;
@@ -83,11 +81,11 @@
   }
 }
 
-.price-blok {
+.price-table-mobil-media-blok {
   flex-shrink: 0;
   width: 260px;
   height: 200px;
-  background-color: white;
+  background-color: var(--color-background-white);
   padding: 16px;
   border-radius: 6px;
 }
@@ -108,23 +106,24 @@
   color: var(--color-text);
 }
 
-.footer-prise__margin {
+.prise-footer__margin {
+  color: var(--color-text);
+  max-width: 421px;
+  margin-top: 32px;
   margin-bottom: 16px;
 }
-.offer-button {
-  display: flex;
-  align-items: center;
-  width: 270px;
-  color: #1b1c21;
-  position: relative;
+.offer {
   @media (max-width: 425px) {
-    width: 100vw;
+    max-width: 192px;
     flex-wrap: wrap;
   }
 }
-
-.offer-button::after {
+.prise-footer-offer-button {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-black);
+  padding-left: 3px;
+}
+.prise-footer-offer-button::after {
   content: url(../assets/arrow.svg);
-  position: absolute;
-  right: 0;
 }

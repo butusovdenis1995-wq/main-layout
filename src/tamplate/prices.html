@@ -1,63 +1,65 @@
-<div class="header-price">ЦЕНЫ НА УСЛУГИ</div>
-<div class="container-table">
-  <table class="table-price">
-    <thead class="head-table">
-      <tr class="tr-head">
+<p class="price-title">ЦЕНЫ НА УСЛУГИ</p>
+<div class="price-table-container">
+  <table class="price-table">
+    <thead class="price-table-header">
+      <tr class="price-table-header-tr">
         <td class="td_padding">Ремонтные услуги</td>
         <td class="td_padding">Цена</td>
         <td class="td_padding">Срок</td>
       </tr>
     </thead>
-    <tbody class="body-table">
-      <tr class="tr_padding">
-        <td class="td_padding border-radius-top">Диагностика</td>
+    <tbody class="price-table-body">
+      <tr class="price-table-body-tr">
+        <td class="td_padding price-table-border-radius-top">Диагностика</td>
         <td class="td_padding">Бесплатно</td>
         <td class="td_padding">30 мин</td>
-        <td class="td_padding order border-radius-top">
+        <td class="td_padding price-button-order price-table-border-radius-top">
           <button>
             <img src="../assets/order.svg" alt="order" />
           </button>
         </td>
       </tr>
-      <tr class="tr_padding">
+      <tr class="price-table-body-tr">
         <td class="td_padding">Замена дисплея</td>
         <td class="td_padding">1 000 ₽</td>
         <td class="td_padding">30-120 мин</td>
-        <td class="td_padding order">
+        <td class="td_padding price-button-order">
           <button>
             <img src="../assets/order.svg" alt="order" />
           </button>
         </td>
       </tr>
-      <tr class="tr_padding">
+      <tr class="price-table-body-tr">
         <td class="td_padding">Замена полифоническо динамика</td>
         <td class="td_padding">1 000 ₽</td>
         <td class="td_padding">30-120 мин</td>
-        <td class="td_padding order">
+        <td class="td_padding price-button-order">
           <button>
             <img src="../assets/order.svg" alt="order" />
           </button>
         </td>
       </tr>
-      <tr class="tr_padding">
+      <tr class="price-table-body-tr">
         <td class="td_padding">
           Тестирование с выдачей технического заключения
         </td>
         <td class="td_padding">1 000 ₽</td>
         <td class="td_padding">30-120 мин</td>
-        <td class="td_padding order">
+        <td class="td_padding price-button-order">
           <button>
             <img src="../assets/order.svg" alt="order" />
           </button>
         </td>
       </tr>
-      <tr class="tr_padding">
-        <td class="td_padding border-radius-bottom">
+      <tr class="price-table-body-tr">
+        <td class="td_padding price-table-border-radius-bottom">
           Замена программного обеспечения
         </td>
         <td class="td_padding">1 000 ₽</td>
         <td class="td_padding">30-120 мин</td>
-        <td class="td_padding order border-radius-bottom">
+        <td
+          class="td_padding price-button-order price-table-border-radius-bottom"
+        >
           <button>
             <img src="../assets/order.svg" alt="order" />
           </button>
@@ -65,8 +67,8 @@
       </tr>
     </tbody>
   </table>
-  <div class="mobil-price">
-    <div class="price-blok">
+  <div class="price-table-mobil-media">
+    <div class="price-table-mobil-media-blok">
       <p class="color-text">Ремнтные услуги</p>
       <p class="p-prise">Тестирование с выдачей технического заключения</p>
       <p class="color-text">Цена</p>
@@ -74,7 +76,7 @@
       <p class="color-text">Срок</p>
       <p class="order-ps">30-120 мин</p>
     </div>
-    <div class="price-blok">
+    <div class="price-table-mobil-media-blok">
       <p class="color-text">Ремнтные услуги</p>
       <p class="p-prise">Замена полифоническо динамика</p>
       <p class="color-text">Цена</p>
@@ -82,7 +84,7 @@
       <p class="color-text">Срок</p>
       <p class="order-ps">30-120 мин</p>
     </div>
-    <div class="price-blok">
+    <div class="price-table-mobil-media-blok">
       <p class="color-text">Ремнтные услуги</p>
       <p class="p-prise">Диагностика</p>
       <p class="color-text">Цена</p>
@@ -90,7 +92,7 @@
       <p class="color-text">Срок</p>
       <p class="order-ps">30 мин</p>
     </div>
-    <div class="price-blok">
+    <div class="price-table-mobil-media-blok">
       <p class="color-text">Ремнтные услуги</p>
       <p class="p-prise">Замена дисплея</p>
       <p class="color-text">Цена</p>
@@ -98,7 +100,7 @@
       <p class="color-text">Срок</p>
       <p class="order-ps">30-120 мин</p>
     </div>
-    <div class="price-blok">
+    <div class="price-table-mobil-media-blok">
       <p class="color-text">Ремнтные услуги</p>
       <p class="p-prise">Замена программного обеспечения</p>
       <p class="color-text">Цена</p>
@@ -107,13 +109,16 @@
       <p class="order-ps">30-120 мин</p>
     </div>
   </div>
-  <div class="footer-prise">
-    <p class="footer-prise__margin">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
-    услугу. Для получения коммерческого предложения на постоянное обслуживание,
-    оставьте заявку.
+  <div class="prise-footer">
+    <p class="prise-footer__margin">
+      Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+      услугу. Для получения коммерческого предложения на постоянное
+      обслуживание, оставьте заявку.
     </p>
-    <p class="offer">
-      <a href="./" class="offer-button">Получить коммерческое предложение</a>
-    </p>
+    <div class="offer">
+      <a href="./" class="prise-footer-offer-button"
+        >Получить коммерческое предложение</a
+      >
+    </div>
   </div>
 </div>
