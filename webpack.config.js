@@ -7,7 +7,7 @@ module.exports = {
   entry: "./index.js", // исходный файл с которого вебпак начинает сборку
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "public"), // файл куда вебпак складывает собранный файл
+    path: path.resolve(__dirname, "dist"), // файл куда вебпак складывает собранный файл
   },
   plugins: [
     new HTMLWebpackPlugin({
